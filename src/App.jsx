@@ -1,0 +1,64 @@
+import React from 'react'
+import Hero from './components/Hero'
+import SmoothScrollProvider from './components/SmoothScrollProvider'
+import MouseTrail from './components/MouseTrail'
+import Service from './components/Service'
+import Navbar from './components/Navbar'
+import About from './components/About'
+import Footer from './components/Footer'
+import { Lightbulb } from 'lucide-react'
+import About2 from './components/About2'
+import About4 from './components/About4'
+
+import About3 from './components/About3'
+import Reviews from './components/Reviews'
+import Contact from './components/Contact'
+import Footer2 from './components/Footer2'
+import Flip from './components/Flip'
+import Welcome from './components/Welcome'
+const App = () => {
+
+
+  return (
+    <div className='relative !overflow-x-hidden'>
+      <div className='fixed bottom-0 left-0 text-sm flex items-center gap-2 pr-4 group z-[100] cursor-pointer text-white   font-Raleway font-normal bg-black p-2 px- rounded-tr-3xl hover:text-black hover:bg-white transition-all duration-700 ease-in-out '><Lightbulb className='group-hover:text-black' />  Let's Discuss Your Idea</div>
+      <Welcome />
+    <Flip/>
+      <Navbar />
+      <div className='hidden lg:block'>
+
+      <MouseTrail />
+      </div>
+      <SmoothScrollProvider>
+
+
+        <div  className=' text-white '>
+          <Hero />
+          <Service />
+
+          <div id='AboutUs' className="">
+            <About />
+            <About2 />
+            <Reviews/>
+            {/* <About3 /> */}
+            {/* <About4/> */}
+          </div>
+          {/* <Test/> */}
+          {/* <div className='h-screen flex items-center justify-center bg-white '>dumy</div> */}
+
+          {/* <div id='Contact' className='h-screen flex items-center justify-center'>Service</div> */}
+
+          <div id='Contact'>
+
+        <Footer />
+          <Contact/>
+          <Footer2 />
+
+          </div>
+        </div>
+      </SmoothScrollProvider>
+    </div>
+  )
+}
+
+export default App
