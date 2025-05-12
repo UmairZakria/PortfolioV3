@@ -52,7 +52,7 @@ const Word = ({ children }) => {
           </motion.span>
         ))}
       </div>
-      <div className="!absolute pt-[1px] !inset-0">
+      <div className="!absolute  !inset-0">
         {children.split("").map((l, i) => (
           <motion.span
             variants={{

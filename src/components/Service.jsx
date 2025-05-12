@@ -92,10 +92,10 @@ const Service = () => {
   };
 
   const childVariants = {
-    initial: { opacity: 0, y: 20 },
+    initial: { opacity: isMobile ? 1 : 0 },
     hover: {
       opacity: 1,
-      y: 0,
+      // y: 0,
       transition: {
         type: "tween",
         stiffness: 200,
@@ -189,13 +189,13 @@ const Service = () => {
             initial="initial"
             whileHover="hover"
             transition={{ duration: 1 }}
-            className="group relative  flex gap-6 flex-wrap items-center justify-end md:justify-between border-b !border-gray-300 w-full p-8 h-auto overflow-hidden"
+            className="group relative p-2 py-8   flex gap-6 flex-wrap items-center justify-end md:justify-between border-b !border-gray-300 w-full lg:p-8 h-auto overflow-hidden"
           >
             {/* Text Content */}
-            <div className="relative z-10 w-full ">
+            <div className="relative z-10 w-full  ">
               <motion.div className="relative flex gap-6 flex-wrap items-center justify-between">
                 <motion.h1
-                  className="text-3xl !opacity-100 lg:opacity-0d text-gray-300 relative"
+                  className="text-3xl text-white lg:text-gray-300 relative"
                   variants={titleVariants}
                 >
                   {item.title}
@@ -203,10 +203,10 @@ const Service = () => {
 
                 {/* Description */}
                 <motion.div
-                  className="w-full md:w-[50%]"
+                  className="w-full md:w-[50%] "
                   variants={childVariants}
                 >
-                  <p className="text-lg xl:text-xl text-white">
+                  <p className="text-[17px] leading-8 lg:text-lg xl:text-xl text-gray-300 lg:text-white">
                     {item.description}
                   </p>
                 </motion.div>

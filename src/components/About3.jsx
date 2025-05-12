@@ -135,7 +135,7 @@ const About2 = () => {
                         controls
 
                         // loop
-                        autoPlay
+                        // autoPlay
                         className=" h-full w-full object-fit  origin-center"
                    ></video>
             </div>

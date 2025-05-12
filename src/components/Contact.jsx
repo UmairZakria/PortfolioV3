@@ -54,7 +54,7 @@ const Contact = () => {
                             We Don’t Just Build, <br /> We Transform                        </motion.h2>
 
                         <p className="text-gray-300 mt-4">
-                        At Edge Smart, we believe in crafting solutions that go beyond expectations. Tell us your goals, and let’s explore the possibilities together. Innovation begins when the right minds connect.
+                        We believe in crafting solutions that go beyond expectations. Tell us your goals, and let’s explore the possibilities together. Innovation begins when the right minds connect.
                         </p>
 
                         <form id="contactForm" onSubmit={handleSubmit} className="mt-8 space-y-6">
@@ -109,7 +109,7 @@ const Contact = () => {
                                 href="mailto:codagentic.software@gmail.com"
                                 className="text-lg flex items-center text-green  text-wrap gap-2 hover:underline"
                             >
-                                <MailIcon size={18} /> inbox@edgesmart.com
+                                <MailIcon size={18} /> umairzakria6@gmail.com
                             </a>
                             <a
                             target='_blank'

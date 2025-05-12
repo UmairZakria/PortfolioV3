@@ -6,6 +6,7 @@ import { MoveRight, MoveRightIcon, MoveDown } from 'lucide-react'
 import { motion } from 'framer-motion'
 import ImageDistortionEffect from "./WaveImage"
 import SplitType from "split-type";
+import Word from './Word';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -58,10 +59,10 @@ const About = () => {
             .join(' ');
     };
     const data = [
-        { name: 'PixelCraft', category: "Logo", img: "https://cdn.dribbble.com/userupload/35565885/file/original-d367a7d39ab09572d890623bee842569.png?resize=1200x853&vertical=center" },
-        { name: 'CreativeVision', category: "Web Design", img: "https://cdn.dribbble.com/userupload/37370306/file/original-24ea280a87b43f3c9dba71e1740af0a3.png?resize=1200x900&vertical=center" },
+        { name: 'PixelCraft', category: "Web Design", img: "https://cdn.dribbble.com/userupload/15287907/file/original-1947f11c0ad56aba125d43db4d155cc2.png?resize=752x564&vertical=center" },
+        { name: 'CreativeVision', category: "Web Design", img: "https://cdn.dribbble.com/userupload/15027790/file/original-ec0a19ccfded1a1640077d91738715d0.png?resize=752x564&vertical=center" },
         { name: 'Code Nexus', category: "Web Development", img: "https://cdn.dribbble.com/userupload/40515275/file/original-dfc2d613e15f0cfe4a34f4def8a94edc.png?resize=1200x900&vertical=center" },
-        { name: 'BrandFlow', category: "Logo", img: "https://cdn.dribbble.com/userupload/40490768/file/original-cca1edc6f848feb3af09c6f764ff4ade.png?resize=1200x900&vertical=center" },
+        { name: 'BrandFlow', category: "Web Design", img: "https://cdn.dribbble.com/userupload/40490768/file/original-cca1edc6f848feb3af09c6f764ff4ade.png?resize=1200x900&vertical=center" },
         // { name: 'UI Master', category: "Web Design", img: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msMCf.img" },
         // { name: 'Design Genie', category: "Web Design", img: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msMCf.img" },
         // { name: 'Visionary UI', category: "Web Design", img: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msMCf.img" },
@@ -118,7 +119,7 @@ const About = () => {
             },
         });
         gsap.to('.scrollsvg', {
-            y: 330,
+            y: 230,
             scrollTrigger: {
                 trigger: '.scrollsvg',
                 start: "top 60%",
@@ -156,14 +157,14 @@ const About = () => {
     return (
         <div className="relative">
 
-            <div id='AboutUs' className=' min-h-screen space-y-[30vh] my-[50vh] px-4 container mx-auto w-full' >
+            <div id='AboutUs' className=' min-h-screen space-y-[20vh] my-[50vh] px-4 container mx-auto w-full' >
                 <div ref={containerRef} className='space-y-12'>
                     <div className="flex items-center justify-start">
 
                         <h2 className="text-5xl md:text-6xl" > Who We Are </h2>
 
                     </div>
-                    <p ref={textRef} className="w-full md:w-[70%] font-Raleway text-white text-xl  leading-loose font-extralight" >
+                    <p ref={textRef} className="w-full md:w-[70%] font-karl text-white text-lg lg:text-xl  lg:leading-loose font-extralight" >
 
                     </p>
 
@@ -175,12 +176,12 @@ const About = () => {
                             <div className="flex w-full flex-wrap gap-4 items-center  justify-between">
 
                                 <h2 ref={textRef2} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className=" text-3xl md:text-7xl  text-white font-Montserrat">Featured Work</h2>
-                                <p className="md:w-1/4  leading-loose font-Raleway font-extralight text-sm text-gray-300  " >A glimpse into the ideas we've brought to life — crafted with purpose, shaped by function, and driven by simplicity.</p>
+                                <p className="md:w-1/4  leading-loose font-Raleway font-extralight text-[15px] text-gray-300  " >A glimpse into the ideas we've brought to life — crafted with purpose, shaped by function, and driven by simplicity.</p>
                             </div>
 
                             <div className="  flex flex-wrap items-center justify-center gap-6">
                                 <button onClick={() => setSelectedCategory(null)} className={`px-5 rounded-3xl shadow-lg hover:shadow-gray-500   hover:bg-white hover:text-black  ${selectedCategory === null ? "text-black bg-white shadow-gray-500 " : "shadow-gray-900 bg-secbg"
-                                    }  transition-all ease-in-out duration-500   py-2 text-sm `}>All</button>
+                                    }  transition-all ease-in-out duration-500   py-2 text-sm `}><Word>All</Word></button>
                                 {
                                     Categories.map((cat, index) => (
                                         <motion.button initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.7 }} onClick={() => setSelectedCategory(cat)} key={index} className={`px-5 hover:shadow-lg rounded-3xl shadow-lg hover:shadow-gray-500   hover:bg-white hover:text-black ${selectedCategory === cat ? "text-black bg-white shadow-gray-500" : "bg-secbg shadow-gray-900 "

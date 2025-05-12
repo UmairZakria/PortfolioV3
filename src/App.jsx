@@ -15,15 +15,18 @@ import Reviews from './components/Reviews'
 import Contact from './components/Contact'
 import Footer2 from './components/Footer2'
 import Flip from './components/Flip'
+import { useEffect } from 'react'
 import Welcome from './components/Welcome'
+import { useTopLayer } from './components/Dlayers'
 const App = () => {
+
 
 
   return (
     <div className='relative !overflow-x-hidden'>
-      <div className='fixed bottom-0 left-0 text-sm flex items-center gap-2 pr-4 group z-[100] cursor-pointer text-white   font-Raleway font-normal bg-black p-2 px- rounded-tr-3xl hover:text-black hover:bg-white transition-all duration-700 ease-in-out '><Lightbulb className='group-hover:text-black' />  Let's Discuss Your Idea</div>
+      <a href='#Contact' className='fixed bottom-0 left-0  text-xs lg:text-sm flex items-center gap-2 pr-4 group z-[100] cursor-pointer text-white   font-Raleway font-normal bg-black p-2 px- rounded-tr-3xl hover:text-black hover:bg-white transition-all duration-700 ease-in-out '><Lightbulb className='group-hover:text-black ' />  Let's Discuss Your Idea</a>
       <Welcome />
-    <Flip/>
+    {/* <Flip/> */}
       <Navbar />
       <div className='hidden lg:block'>
 
@@ -33,15 +36,16 @@ const App = () => {
 
 
         <div  className=' text-white '>
+          
           <Hero />
           <Service />
 
           <div id='AboutUs' className="">
             <About />
             <About2 />
-            <Reviews/>
             {/* <About3 /> */}
-            {/* <About4/> */}
+            <About4/>
+            <Reviews/>
           </div>
           {/* <Test/> */}
           {/* <div className='h-screen flex items-center justify-center bg-white '>dumy</div> */}

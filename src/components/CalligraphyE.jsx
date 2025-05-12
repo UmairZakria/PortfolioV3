@@ -36,7 +36,7 @@ const Letwork = () => {
   return (
     <div
       ref={contRef}
-      className="w-full   whitespace-pre-wrap min-h-[60vh] max-h-screen text-[60px] md:text-[75px] lg:text-[160px] flex items-center justify-center font-brittany"
+      className="w-full   whitespace-pre-wrap min-h-[60vh] max-h-screen text-[50px] px-4 md:text-[75px] lg:text-[80px] flex items-center justify-center font-Raleway"
     >
       <div ref={textRef}>Lets Work Together</div>
     </div>

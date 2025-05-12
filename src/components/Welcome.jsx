@@ -24,12 +24,16 @@ const Welcome = () => {
         tlogo.to('.bigtriangle', { scale: 1.5, x: 0, y: 0, duration: 1 })
             .to('.smalltriangle', { opacity: 1, rotate: 0, duration: 0.5 })
             .to('.logotext', { opacity: 1, translateX: 0, duration: 1 })
-            .to('.logocont', { y: -100, duration: 1, delay: 2 })
-            .to('.bar', {  scaleY: 0, transformOrigin: "top", stagger: 0.08, duration: 2, ease: 'power4.inOut' }, "<")
+            .to('.logocont', { y: -100, duration: 1, delay: 1.5 })
+            .to('.bar', {  scaleY: 0, opacity:0.95, transformOrigin: "top", stagger: 0.08, duration: 2, ease: 'power4.inOut' }, "<")
+            
             // .to('.bar2', {  height:0, stagger: 0.2, duration: 0.4 },"-=0.5")
-
+            
+            
             .to('.maincont', { height: 0, duration: 0.4 })
+            .set('#welcome', {display: 'none',})
             .set('html, body', { overflow: "auto", height: 'auto' })
+            
 
         tlogo.play()
 
@@ -38,7 +42,7 @@ const Welcome = () => {
 
 
     return (
-        <>
+        <div id='welcome' className='relative'>
             {done &&
                 <div className='maincont  h-screen bg-transparent w-full fixed  !z-[999] will-change-transform'>
                     {/* <div className='absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 text-8xl '>Invotion Meet Us</div> */}
@@ -77,7 +81,6 @@ const Welcome = () => {
                                         className="bigtriangle  text-white "
                                     >
                                         <path
-                                            // fill="red"
                                             stroke="black"
 
                                             strokeWidth="2"
@@ -92,7 +95,6 @@ const Welcome = () => {
                                         className="smalltriangle text-white absolute -top-1 right-2 "
                                     >
                                         <path
-                                            // fill="red"
                                             stroke="black"
 
                                             strokeWidth="2"
@@ -105,7 +107,7 @@ const Welcome = () => {
 
 
                                 <div className=" text-black pb-2 overflow-hidden ">
-                                    <h1 className="logotext text-3xl font-Goldman up">Umair Zakria
+                                    <h1 className="logotext text-3xl font-Goldman  up">Umair Zakria
                                     </h1>
                                 </div>
                             </div>
@@ -117,7 +119,7 @@ const Welcome = () => {
 
                 </div>
             }
-        </>
+        </div>
 
     )
 }

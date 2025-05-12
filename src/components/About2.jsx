@@ -54,7 +54,7 @@ const About2 = () => {
         //     },
         // });
         gsap.from('.foundvid',{
-            scale:1.5,
+            scale:0.8,
             ease:'power1.inOut',
             scrollTrigger: {
                 trigger: '.foundvid',
@@ -81,7 +81,7 @@ const About2 = () => {
                         <div className="text-xl w-full md:w-1/2 font-Montserrat text-">
                             Crafting excellence, not just abundance. Quality that speaks louder than quantity.
                         </div>
-                        <div className="xl:w-[65%] lg:w-[70%] w-full mx-auto text-2xl font-Karla leading-7 text-">
+                        <div className="xl:w-[65%] lg:w-[80%] w-full mx-auto text-xl font-Karla leading-7 text-">
                             We believe in delivering excellence over excess. Every project we undertake is driven by precision, innovation, and a commitment to quality—because true impact comes from mastery, not mass production.
                         </div>
 
@@ -90,7 +90,7 @@ const About2 = () => {
                         <div className="text-xl w-full md:w-1/2 font-Montserrat text-">
                             Precision that delivers, passion that resonates. You need both.
                         </div>
-                        <div className="xl:w-[65%] w-full lg:w-[70%] text-2xl mx-auto font-Karla leading-7 text-">
+                        <div className="xl:w-[65%] w-full lg:w-[80%] text-xl mx-auto font-Karla leading-7 text-">
                             True impact is a balance of precision and passion. We blend cutting-edge performance with deep emotional connection, ensuring every experience is not only powerful but also meaningful—because success isn’t just about efficiency, it’s about resonance.
                         </div>
 
@@ -129,14 +129,14 @@ const About2 = () => {
 
                     </div>
                 </div> */}
-                <div className="foundvid  h-auto my-[20vh] w-full">
+                <div className="foundvid  h-auto  my-[20vh] container mx-auto flex items-center justify-center ">
                     <video src="/take1.mp4"                 
                         // muted
                         controls
 
                         // loop
                         autoPlay
-                        className=" h-full w-full object-fit  origin-center"
+                        className=" h-full w-full lg:w-3/4  object-fit  origin-center"
                    ></video>
             </div>
         </div>
