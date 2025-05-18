@@ -111,21 +111,21 @@ export default function Reviews() {
                 <p className='text-sm uppercase font-Goldman'>testimonials</p>
                 <h1>Built on Trust, Proven by Results</h1>
             </div>
-            <div onMouseMove={(e) => { manageMouseMove(e) }} className='bg-white contan  text-black min-h-[100vh]  pb-[10vh] flex  justify-evenly flex-wrap' >
+            <div onMouseMove={(e) => { manageMouseMove(e) }} className='bg-white   text-black min-h-[100vh]  pb-[10vh] flex   items-center justify-center md:gap-0 gap-[5vh] md:justify-evenly flex-wrap' >
 
 
-                <div ref={plane3} className='flex items-center justify-around flex-col gap-[30vh]' >
+                <div ref={plane3} className='flex items-center justify-around flex-col gap-[15vh] md:gap-[30vh]' >
 
                     <Text name={'John Doe'} role={'CEO, Tech Innovations'} img={'https://img.icons8.com/?size=80&id=60655&format=png&color=1A1A1A'} text={'Our partnership with this team has exceeded expectations. They developed an innovative product that transformed the way we operate, offering exceptional results.'} />
 
                     <Text name={'Emma W. Lee'} role={'CTO, Bright Future Solutions'} img={'https://img.icons8.com/?size=100&id=60655&format=png&color=1A1A1A'} text={'They have been instrumental in transforming our business model with a unique solution. Their technical expertise and creative vision are unmatched.'} />
 
                 </div>
-                <div ref={plane2} className='flex items-center justify-around flex-col  gap-[40vh] xl:gap-[20vh]'>
+                <div ref={plane2} className='flex items-center justify-around flex-col  gap-[15vh] md:gap-[40vh] xl:gap-[20vh]'>
                     <Text name={'Lily Zhang'} role={'Founder, GreenTech Labs'} img={'https://img.icons8.com/?size=100&id=60655&format=png&color=1A1A1A'} text={'The development team has been phenomenal in delivering a product that has boosted our operational efficiency. Their collaboration was key to our success.'} />
                     <Text name={'Michael R. Scott'} role={'Director, Data Solutions'} img={'https://img.icons8.com/?size=100&id=60655&format=png&color=1A1A1A'} text={'A top-notch development team. They’re always professional, delivering outstanding solutions that help our business grow. Highly recommend their work.'} />
                 </div>
-                <div ref={plane1} className='flex items-center justify-around flex-col gap-[30vh]'>
+                <div ref={plane1} className='flex items-center justify-around flex-col gap-[15vh] md:gap-[30vh]'>
 
                     <Text name={'Anna White'} role={'Founder, Spark Innovations'} img={'https://img.icons8.com/?size=100&id=60655&format=png&color=1A1A1A'} text={'The team’s approach to problem-solving and design is second to none. They delivered a solution that fit our needs perfectly and helped us scale up quickly.'} />
                     <Text name={'David S. Foster'} role={'Manager, Digital Ventures'} img={'https://img.icons8.com/?size=100&id=60655&format=png&color=1A1A1A'} text={'Working with this team has been an absolute pleasure. Their technical expertise and timely delivery helped us achieve our objectives seamlessly.'} />

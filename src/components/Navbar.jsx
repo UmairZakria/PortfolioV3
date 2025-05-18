@@ -70,7 +70,7 @@ const Navbar = () => {
                 className="flex items-center px-6 gap-4"
             >
                 <div className="text-white">
-                    <h1 className=" text-4xl lg:text-6xl font-brittany !mix-blend-difference ">
+                    <h1 className=" text-4xl lg:text-6xl font-brittany mix-blend-difference ">
                         Umair zakria
                     </h1>
                 </div>

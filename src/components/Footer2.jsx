@@ -15,11 +15,11 @@ const Footer2 = () => {
   return (
     <>
       <div
-        className="min-h-[50vh]  flex items-center justify-center relative bg-black"
+        className="min-h-[50vh]   flex items-center justify-center relative bg-black"
         onMouseMove={handleMouseMove}
       >
         <div
-          className="text-[100px] lg:text-[200px] font-Karla font-bold text-white"
+          className="text-[100px] hidden lg:text-[200px] font-Karla font-bold text-white"
           style={{
             WebkitMaskImage: `radial-gradient(circle 100px at ${mousePosition.x} ${mousePosition.y}, black 30%, transparent 100%)`,
             maskImage: `radial-gradient(circle 100px at ${mousePosition.x} ${mousePosition.y}, black 30%, transparent 100%)`,
@@ -29,6 +29,7 @@ const Footer2 = () => {
         >
           Umair
         </div>
+        {/* <span className="my-30"></span> */}
       </div>
       <div className="bg-black h-[40px] w-full font-Montserrat flex items-center justify-evenly">
         <div className="flex items-center gap-2">

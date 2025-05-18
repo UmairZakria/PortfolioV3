@@ -53,9 +53,9 @@ const About2 = () => {
         //         pin: true,
         //     },
         // });
-        gsap.from('.foundvid',{
-            scale:0.8,
-            ease:'power1.inOut',
+        gsap.from('.foundvid', {
+            scale: 0.8,
+            ease: 'power1.inOut',
             scrollTrigger: {
                 trigger: '.foundvid',
                 start: "top 80%", // Starts animation when container reaches top
@@ -63,20 +63,21 @@ const About2 = () => {
                 scrub: 1,
                 toggleActions: "play none none reverse",
 
-            },  
+            },
         })
 
     }, []);
 
     return (
         <div className="bg-white text-black py-32 px-4 min-h-screen">
-            <div ref={contRef} className="container mx-auto">
-                <div>
-                    <h1 className="mtitle text-4xl md:text-7xl font-normal font-Raleway ">
+            <div ref={contRef} className="container mx-auto  overflow-hidden">
+                <div className="relative overflow-hidden !z-[100]">
+                    <h1 className="mtitle relative z-10 text-4xl md:text-7xl font-normal font-Raleway ">
                         Our approach.
                     </h1>
-                    <div className="flex items-center justify-between md:grid md:grid-cols-2 flex-wrap gap-16">
-                        <hr className="text-gray-300 my-20 col-span-2" />
+                    <div className="relative !z-50 flex items-center justify-between md:grid md:grid-cols-2 flex-wrap gap-16">
+                        {/* <hr className="text-gray-300 my-20 col-span-2" /> */}
+                        <span className="text-gray-300 my-10 col-span-2" />
 
                         <div className="text-xl w-full md:w-1/2 font-Montserrat text-">
                             Crafting excellence, not just abundance. Quality that speaks louder than quantity.
@@ -85,7 +86,7 @@ const About2 = () => {
                             We believe in delivering excellence over excess. Every project we undertake is driven by precision, innovation, and a commitment to quality—because true impact comes from mastery, not mass production.
                         </div>
 
-                        <hr className="text-gray-300 my-20 col-span-2" />
+                        <span className="text-gray-300 my-10 col-span-2" />
 
                         <div className="text-xl w-full md:w-1/2 font-Montserrat text-">
                             Precision that delivers, passion that resonates. You need both.
@@ -95,6 +96,85 @@ const About2 = () => {
                         </div>
 
                     </div>
+                    <div className="absolute grid opacity-50  top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rotate-12 h-screen  w-screen grid-cols-6 lg:grid-cols-12 grid-rows-6 lg:grid-rows-10 ">
+                        <div className="!border-[1px] border-gray-100 p-4"></div>
+                        <div className="!border-[1px] border-gray-100 p-4"></div>
+                        <div className="!border-[1px] border-gray-100 p-4" ></div>
+                        <div className="!border-[1px] border-gray-100 p-4"></div>
+                        <div className="!border-[1px] border-gray-100 p-4"></div>
+                        <div className="!border-[1px] border-gray-100 p-4"></div>
+                        <div className="!border-[1px] border-gray-100 p-4"></div>
+                        <div className="!border-[1px] border-gray-100 p-4"></div>
+                        <div className="!border-[1px] border-gray-100 p-4"></div>
+                        <div className="!border-[1px] border-gray-100 p-4"></div>
+                        {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
+
+                                <div key={data} className="lg:block hidden !border-[1px] border-gray-100 p-4"></div>
+                            ))
+                        }
+                        {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
+
+                                <div key={data} className="lg:block hidden !border-[1px] border-gray-100 p-4"></div>
+                            ))
+                        }
+                        {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
+
+                                <div key={data} className="lg:block hidden !border-[1px] border-gray-100 p-4"></div>
+                            ))
+                        }
+                        {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
+
+                                <div key={data} className="lg:block hidden !border-[1px] border-gray-100 p-4"></div>
+                            ))
+                        }
+                        {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
+
+                                <div key={data} className="lg:block hidden !border-[1px] border-gray-100 p-4"></div>
+                            ))
+                        }
+                        {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
+
+                                <div key={data} className="lg:block hidden !border-[1px] border-gray-100 p-4"></div>
+                            ))
+                        }
+                        {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
+
+                                <div key={data} className="lg:block hidden !border-[1px] border-gray-100 p-4"></div>
+                            ))
+                        }
+                        {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
+
+                                <div key={data} className="lg:block hidden !border-[1px] border-gray-100 p-4"></div>
+                            ))
+                        }
+                        {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
+
+                                <div key={data} className="!border-[1px] border-gray-100 p-4"></div>
+                            ))
+                        }
+                                                {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
+
+                                <div key={data} className="!border-[1px] border-gray-100 p-4"></div>
+                            ))
+                        }
+                                                {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
+
+                                <div key={data} className="!border-[1px] border-gray-100 p-4"></div>
+                            ))
+                        }
+
+                    </div>  
                 </div>
                 {/* <div ref={containerRef} className="flex   gap-12  xl:px-20 h-auto my-[60vh]  relative  w-full">
                     <div className="  w-[40%]  hidden md:block">
@@ -130,16 +210,16 @@ const About2 = () => {
                     </div>
                 </div> */}
                 <div className="foundvid  h-auto  my-[20vh] container mx-auto flex items-center justify-center ">
-                    <video src="/take1.mp4"                 
+                    <video src="/take1.mp4"
                         // muted
                         controls
 
                         // loop
                         autoPlay
                         className=" h-full w-full lg:w-3/4  object-fit  origin-center"
-                   ></video>
+                    ></video>
+                </div>
             </div>
-        </div>
         </div >
     );
 };
