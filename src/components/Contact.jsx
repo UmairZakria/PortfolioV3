@@ -17,7 +17,7 @@ const Contact = () => {
         e.preventDefault();
         setError('Sending...')
 
-        axios.post('https://umairzakria.vercel.app/api/contact', { fname, lname, email, budget, discription })
+        axios.post('https://umair-portfolio-eight.vercel.app/api/contact', { fname, lname, email, budget, discription })
             .then((res) => {
                 console.log(res
 
