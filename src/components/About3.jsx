@@ -130,7 +130,7 @@ const About2 = () => {
                     </div>
                 </div> */}
                 <div className="foundvid  h-auto my-[20vh] w-full">
-                    <video src="/take1.mp4"                 
+                    <video src="/take2.mp4"                 
                         // muted
                         controls
 
