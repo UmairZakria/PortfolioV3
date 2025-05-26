@@ -46,7 +46,7 @@ const About4 = () => {
                         <div className='flex flex-wrap gap-5  justify-between items-center w-full'>
 
                             <div className="space-y-2 relative">
-                                <motion.h2 initial={{ opacity: 0, y: 20, x: -20 }} whileInView={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 1, delay: 0.2 }} className="text-3xl relative z-10 font-Raleway">Maryam Fatima</motion.h2>
+                                <motion.h2 initial={{ opacity: 0, y: 20, x: -20 }} whileInView={{ opacity: 1, y: 0, x: 0 }} transition={{ duration: 1, delay: 0.2 }} className="text-6xl -rotate-4 relative z-10 text-gray-200 font-brittany pb-4">Maryam Fatima</motion.h2>
                                 <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} className="text-[15px] relative z-10 font-Karla uppercase text-gray-300 hover:text-white "><Word>ML&nbsp;&&nbsp;Software&nbsp;Engineer</Word></motion.h3>
                                 <div className="absolute grid  rotate-12 opacity-40 h-[100vh]  w-screen -top-[70%] lg:-top-[200%] -right-3/4 grid-cols-6 lg:grid-cols-12 grid-rows-6 lg:grid-rows-10 ">
                                     <div className="!border-[1px] border-gray-800 p-2"></div>

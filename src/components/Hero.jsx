@@ -13,7 +13,7 @@ import { useTopLayer } from './Dlayers'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero = () => {
+const Hero = ({ anidone }) => {
     const layer = useTopLayer(['Home', 'welcome'])
     const contref = useRef(null)
     const sectionRef = useRef(null);
@@ -22,20 +22,20 @@ const Hero = () => {
 
     useGSAP(() => {
 
-        if (layer === 'Home') {
+        if (anidone) {
             const twelcome = gsap.timeline()
-            twelcome.to('.section1',{opacity:1,duration:0.6},'label-bc')
-                    .from('.greeting',{y:-30 ,x:-30,opacity:0},'label-bc')
-                    .from('.greeting1',{y:-25,opacity:0,delay:0.5 ,duration:0.4},'label-bc')
-                    .from('.greeting2',{y:-25,opacity:0,delay:0.3 ,duration:0.4},'label-bc')
-                    .from('.greeting3',{y:-25,opacity:0,delay:0.2 ,duration:0.4},'label-bc')
-                    .from('.socials',{opacity:0,y:100,duration:0.7},'label-bc')
-                    .from('.title1',{y:15,opacity:0,duration:1},'label-bc')
-                    .from('.title2',{y:-15, scale:1.1, opacity:0,duration:0.9},'label-bc')
+            twelcome.to('.section1', { opacity: 1, duration: 0.6 }, 'label-bc')
+                .from('.greeting', { y: -30, x: -30, opacity: 0 }, 'label-bc')
+                .from('.greeting1', { y: -25, opacity: 0, delay: 0.5, duration: 0.4 }, 'label-bc')
+                .from('.greeting2', { y: -25, opacity: 0, delay: 0.3, duration: 0.4 }, 'label-bc')
+                .from('.greeting3', { y: -25, opacity: 0, delay: 0.2, duration: 0.4 }, 'label-bc')
+                .from('.socials', { opacity: 0, y: 100, duration: 0.7 }, 'label-bc')
+                .from('.title1', { y: 15, opacity: 0, duration: 1 }, 'label-bc')
+                .from('.title2', { y: -15, scale: 1.1, opacity: 0, duration: 0.9 }, 'label-bc')
             twelcome.play()
 
         }
-    }, [layer]);
+    }, [anidone]);
 
     useGSAP(() => {
         const section = sectionRef.current;
@@ -67,6 +67,11 @@ const Hero = () => {
             },
         });
     }, [])
+    useEffect(() => {
+        if (vidref.current) {
+            vidref.current.playbackRate = 0.5;
+        }
+    }, []);
 
 
     return (
@@ -78,9 +83,10 @@ const Hero = () => {
 
                 <motion.video
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: layer === "Home"? 1: 0, transition: { delay: 0.5, duration: 1 } }}
+                    whileInView={{ opacity: anidone ? 1 : 0, transition: { delay: 0.2, duration: 1 } }}
                     ref={vidref}
                     src="/bg1.mp4"
+
                     muted
                     loop
                     autoPlay
@@ -104,7 +110,7 @@ const Hero = () => {
                             Scroll Down
 
                         </div> */}
-                        <h3 className='socials text-sm absolute  right-5 bottom-16 lg:bottom-5  text-gray-300'><span className='font-brittany text-3xl font-light'>Socials / <a href="https://www.linkedin.com/in/umair-zakria-67477b33a/" target='_blank' className='hover:text-white'>li</a> / <a href="https://github.com/UmairZakria" target='_blank' className='hover:text-white'>git</a> </span> </h3>
+                        <h3 className='socials text-sm absolute  right-5 bottom-16 lg:bottom-5  text-gray-300'><span className='font-brittany text-3xl font-light'>Socials / <a href="https://www.linkedin.com/in/umair-zakria-67477b33a/" target='_blank' className='hover:text-white'>li</a> / <a href="https://github.com/UmairZakria" target='_blank' className='hover:text-white'>git-Hub</a> </span> </h3>
 
                         <div className=" flex lg:px-0 px-2  76 justify-between">
                             <span className='greeting'>
@@ -130,7 +136,7 @@ const Hero = () => {
                         </div>
                         <div className=" font-Raleway px-2 lg:px-0  text-4xl lg:w-[78%] w-screen space-y-3">
                             <h2 className="title2 lg:pl-1 text-[10px] xl:text-[15px] font-Goldman text-gray-400 " >Hi there this is <br /><span className='text-[18px] xl:text-[24px] font-Montserrat    hover:text-white transition-all duration-200 ease-in-out'><span className='text-white '>Umair</span> Zakria</span></h2>
-                            <h1 className='title1 font-extralight text-shadow-lg text-shadow-sky-300 text-[20px] lg:text-[60px] xl:text-[80px]'>
+                            <h1 className='title1  font-Montserrat font-extralight text-shadow-lg text-shadow-sky-300 text-[30px] lg:text-[60px] xl:text-[70px] leading-normal'>
                                 Transforming <span className='animate-pulse'>Ideas</span> into <span className="animate-pulse">Powerful</span> Digital <span className='animate-pulse'>Solutions</span>.
                             </h1>
                         </div>
@@ -150,7 +156,7 @@ const Hero = () => {
                         whileInView={{ y: 0, transition: { delay: 1.3, duration: 0.6 } }}
                         className="section title2 h-screen w-screen flex items-center justify-center"
                     >
-                        <h1 className="lg:text-7xl text-[20px]  xl:text-8xl font-extralight font-Raleway text-center text-4xl w-[78%]">
+                        <h1 className="lg:text-7xl text-[30px] leading-12 md:leading-normal   font-extralight font-Raleway text-center text-4xl w-[78%]">
                             Elevate Your Business with Cutting-Edge Tech.
                         </h1>
                     </motion.div>
@@ -161,7 +167,7 @@ const Hero = () => {
                         whileInView={{ opacity: 1, y: 0, transition: { delay: 0.5, duration: 1 } }}
                         className="section h-screen w-screen flex items-center justify-center"
                     >
-                        <h1 className="lg:text-7xl text-[20px]  xl:text-8xl font-extralight font-Raleway text-center text-4xl w-[78%]">
+                        <h1 className="lg:text-7xl text-[30px]  leading-12 md:leading-normal  xl:text-7xl font-extralight font-Raleway text-center text-4xl w-[78%]">
                             Your Vision, Our Expertise, One Future.
                         </h1>
                     </motion.div>

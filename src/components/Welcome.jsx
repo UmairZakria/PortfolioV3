@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion"
 
-const Welcome = () => {
+const Welcome = ({setAnidone}) => {
     const [done, setDone] = useState(true)
     // useEffect(() => {
 
@@ -25,12 +25,13 @@ const Welcome = () => {
             .to('.smalltriangle', { opacity: 1, rotate: 0, duration: 0.5 })
             .to('.logotext', { opacity: 1, translateX: 0, duration: 1 })
             .to('.logocont', { y: -100, duration: 1, delay: 1.5 })
-            .to('.bar', {  scaleY: 0, opacity:0.95, transformOrigin: "top", stagger: 0.08, duration: 2, ease: 'power4.inOut' }, "<")
+            .to('.bar', {  scaleY: 0, opacity:0.95, transformOrigin: "top", stagger: 0.08, duration: 2, ease: 'power4.inOut' },"bar")
+            .add(() => setAnidone(true),"bar+=1.7")
             
             // .to('.bar2', {  height:0, stagger: 0.2, duration: 0.4 },"-=0.5")
             
             
-            .to('.maincont', { height: 0, duration: 0.4 })
+            .to('.maincont', { height: 0, duration: 0.1 })
             .set('#welcome', {display: 'none',})
             .set('html, body', { overflow: "auto", height: 'auto' })
             

@@ -1,5 +1,5 @@
 // import React from "react";
-import React, { useState,useRef,useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import { MoveRight } from "lucide-react";
 import gsap from 'gsap';
@@ -10,7 +10,7 @@ import SplitType from "split-type";
 import { useGSAP } from "@gsap/react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
-
+import ImageDistortionEffect from "./WaveImage";
 const Service = () => {
   const titleRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -50,12 +50,12 @@ const Service = () => {
       description:
         "Scalable online stores designed for seamless shopping experiences and efficient management.",
       img: "https://cdn.dribbble.com/userupload/34224869/file/original-b66bfbf48ddbe37a5f061766c189edf5.png?resize=752x&vertical=center",
-    },    {
+    }, {
       title: "WordPress Development",
       description:
         "Creating fully customized, secure, and responsive websites with theme customization, plugin development, and e-commerce integration.",
       img: "https://cdn.dribbble.com/userupload/41720954/file/original-c2d576eb55ec1d94d0ca3f7c024d36a1.png?resize=800x600",
-    },   {
+    }, {
       title: "Backend Integration",
       description:
         "Seamless integration of APIs, databases, and third-party services with a smooth, responsive frontend experience.",
@@ -83,7 +83,7 @@ const Service = () => {
 
   const parentVariants = {
     hover: {
-      padding: isMobile ? '10px' : '60px',
+      padding: isMobile ? '10px' : '20px',
       transition: {
         // staggerChildren: 0.1,
         when: "beforeChildren"
@@ -117,7 +117,7 @@ const Service = () => {
     }
   };
 
-  useGSAP(()=>{
+  useGSAP(() => {
     const split = new SplitType(titleRef.current, { types: "chars, words" });
 
     gsap.fromTo(
@@ -138,11 +138,11 @@ const Service = () => {
         },
       }
     );
-  },[])
+  }, [])
 
   return (
     <div id="Service" onMouseMove={handleMouseMove} className="min-h-screen space-y-[10vh] xl:space-y-[30vh] lg:space-y-[40vh]  font-Montserrat my-[50vh] px-4 xl:px-20 lg:px-15">
-      {isHovered && (
+      {/* {isHovered && (
         <motion.div
           className="fixed size-[100] md:size-[280px] object-contain overflow-hidden pointer-events-none z-50"
           style={{
@@ -159,17 +159,17 @@ const Service = () => {
           exit={{ opacity: 0, scale: 0.5 }}
           transition={{ duration:0.5}}
         >
-          <img src={cursorImg} className="w-full h-full object-center object-cover " alt="" />
+          {/* <img src={cursorImg} className="w-full h-full object-center object-cover " alt="" /> 
         </motion.div>
-      )}
+      )} */}
       <div className="space-y-24">
         <h2 className="text-gray-400 text-2xl font-Goldman uppercase">Our Service</h2>
         <div className="flex items-center flex-wrap gap-4 justify-between">
-          <h3 ref={titleRef}  className="text-5xl lg:text-7xl font-Karla font-light">
+          <h3 ref={titleRef} className="text-5xl lg:text-7xl font-Karla font-light">
             What Service We're Offering
           </h3>
-          <motion.p initial={{ opacity: 0}} whileInView={{ opacity: 1}} transition={{ delay: 0.3, duration: 0.6 }}  viewport={{once:true}} className=" md:w-1/3 xl:w-1/2 font-Karla hover:text-white uppercase text-gray-200 text-sm font-extralight leading-relaxed">
-           we create innovative and high-performance digital
+          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.6 }} viewport={{ once: true }} className=" md:w-1/3 xl:w-1/2 font-Karla hover:text-white uppercase text-gray-200 text-sm font-extralight leading-relaxed">
+            we create innovative and high-performance digital
             solutions designed to enhance user experiences and drive growth.
           </motion.p>
         </div>
@@ -189,11 +189,11 @@ const Service = () => {
             initial="initial"
             whileHover="hover"
             transition={{ duration: 1 }}
-            className="group relative p-2 py-8   flex gap-6 flex-wrap items-center justify-end md:justify-between border-b !border-gray-300 w-full lg:p-8 h-auto overflow-hidden"
+            className="group relative p-2 py-8   flex  gap-6 flex-wrap items-center justify-end md:justify-between border-b !border-gray-300 w-full lg:p-4 h-auto overflow-hidden"
           >
             {/* Text Content */}
             <div className="relative z-10 w-full  ">
-              <motion.div className="relative flex gap-6 flex-wrap items-center justify-between">
+              <motion.div className="relative flex gap-4 md:gap-2 lg:flex-nowrap flex-col-reverse md:flex-row  items-center justify-center md:justify-between">
                 <motion.h1
                   className="text-3xl text-white lg:text-gray-300 relative"
                   variants={titleVariants}
@@ -210,10 +210,16 @@ const Service = () => {
                     {item.description}
                   </p>
                 </motion.div>
+                <div className="w-full lg:w-[300px] h-[200px]  overflow-hidden">
+
+                  {/* <img src={item.img} className="w-full h-full hover:scale-110 transition-all duration-300 ease-in-out object-center object-cover " alt={item.title} /> */}
+                  <ImageDistortionEffect imageUrl={item.img} />
+                </div>
+
               </motion.div>
             </div>
 
-            
+
             {/* <motion.a
             href="#Contact"
               className="text-gray-300 p-3 border rounded-full  !border-white shrink-0"

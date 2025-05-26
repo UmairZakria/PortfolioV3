@@ -85,7 +85,20 @@ button:focus-visible {
   --font-Raleway: "Raleway", sans-serif;
   --color-prime: #2eafff;
 
+
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+
+
 
 
 

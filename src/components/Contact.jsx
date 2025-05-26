@@ -42,7 +42,7 @@ const Contact = () => {
     }
     return (
         <div className='min-h-screen  xl:min-h-[75vh] h-auto w-full  mt-32  !z-[9999] relative '>
-            <div className="absolute grid opacity-50  inset-0 grid-cols-6 lg:grid-cols-12 grid-rows-6 lg:grid-rows-10 ">
+            {/* <div className="absolute grid opacity-50  inset-0 grid-cols-6 lg:grid-cols-12 grid-rows-6 lg:grid-rows-10 ">
             <div className="!border-[1px] border-gray-800 p-2"></div>
             <div className="!border-[1px] border-gray-800 p-2"></div>
             <div className="!border-[1px] border-gray-800 p-2" ></div>
@@ -108,7 +108,7 @@ const Contact = () => {
                 ))
             }
             
-            </div>
+            </div> */}
 
             <div className='  '>
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 0.6, delay: 0.2 } }} className="  absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 container  min-h-[80vh]   xl:w-3/4 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 place-content-center backdrop-blur-xs shadow-sm shadow-gray-800 bg-[#00000000]   px-4 py-6 xl:p-8 rounded-2xl">
